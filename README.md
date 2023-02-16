@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite Admin Template
+# 🚀 Vue 3 + TypeScript + Vite Admin Template
 
 ![node@18.12.0](https://img.shields.io/badge/node-18.12.0-green)
 
