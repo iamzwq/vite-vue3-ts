@@ -1,4 +1,4 @@
-import request from "./request";
+import http from "../utils/http";
 import { API_LOGIN, API_USERINFO } from "@/constants/api";
 
 export interface LoginParams {
@@ -7,11 +7,11 @@ export interface LoginParams {
 }
 
 const loginApi = (data: LoginParams) => {
-  return request.post(API_LOGIN, data);
+  return http.post(API_LOGIN, data);
 };
 
 const userInfoApi = () => {
-  return request.get<string>(API_USERINFO);
+  return http.get<string>(API_USERINFO);
 };
 
 const userApi = {

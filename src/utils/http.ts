@@ -74,9 +74,9 @@ class Request {
   }
 }
 
-const request = new Request({
+const http = new Request({
   timeout: 20000,
   baseURL: "http://xxx.xxx.xxx",
 });
 
-export default request;
+export default http;

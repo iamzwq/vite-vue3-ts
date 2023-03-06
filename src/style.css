@@ -24,7 +24,8 @@ body {
   background: #efefef;
 }
 
-li {
+ul,
+ol {
   list-style: none;
 }
 

@@ -8,10 +8,21 @@ import Silder from './Silder.vue'
   <main class="main">
     <Silder />
     <section class="content">
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
+      <router-view v-slot="{ Component, route }">
+        <transition
+          :name="(route?.meta?.transition as string) || 'fade'"
+          mode="out-in"
+        >
           <keep-alive>
-            <component :is="Component" />
+            <suspense>
+              <template #default>
+                <component
+                  :is="Component"
+                  :key="route.meta.usePathKey ? route.path : undefined"
+                />
+              </template>
+              <template #fallback> Loading... </template>
+            </suspense>
           </keep-alive>
         </transition>
       </router-view>
