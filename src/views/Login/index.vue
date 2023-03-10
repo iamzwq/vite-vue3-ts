@@ -60,6 +60,10 @@ const submitForm = (formEl: FormInstance | undefined) => {
           email: 'aaa@bbb.com',
           token: 'ccccccc'
         })
+
+        const redirect = route.query.redirect as string
+        const path = redirect ? decodeURIComponent(redirect) : '/'
+        router.push(path)
       })
     } else {
       console.log('error submit!')

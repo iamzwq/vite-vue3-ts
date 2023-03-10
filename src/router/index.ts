@@ -3,11 +3,8 @@ import type { RouteRecordRaw } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { getLocalStorage } from '@/utils/storage'
-// import { useSessionStore } from '@/stores/session'
 
 NProgress.configure({ showSpinner: false })
-
-// const sessionStore = useSessionStore()
 
 const routes: RouteRecordRaw[] = [
   {

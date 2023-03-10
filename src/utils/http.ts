@@ -58,6 +58,7 @@ class Request {
 
           switch (code) {
             case 401:
+              sessionStore.$reset()
               router.push({
                 name: 'Login',
                 query: {
@@ -92,7 +93,7 @@ class Request {
 
 const http = new Request({
   timeout: 20000,
-  baseURL: 'http://xxx.xxx.xxx',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 })
 
 export default http
