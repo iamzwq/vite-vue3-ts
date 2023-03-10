@@ -11,6 +11,7 @@
 ```json
 "dependencies": {
    "axios": "^1.3.2",
+   "element-plus": "^2.2.36",
    "nprogress": "^0.2.0",
    "pinia": "^2.0.30",
    "vue": "^3.2.45",
@@ -23,6 +24,8 @@
    "fast-glob": "^3.2.12",
    "sass": "^1.58.0",
    "typescript": "^4.9.3",
+   "unplugin-auto-import": "^0.15.1",
+   "unplugin-vue-components": "^0.24.1",
    "vite": "^4.1.0",
    "vite-plugin-svg-icons": "^2.0.1",
    "vue-tsc": "^1.0.24"

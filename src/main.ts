@@ -1,13 +1,13 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import 'virtual:svg-icons-register'
 import router from '@/router'
-import './style.css'
-import SvgIcon from '@/components/SvgIcon.vue'
+import pinia from './stores'
+import 'virtual:svg-icons-register'
+// import "@/styles/index.scss"
 import App from './App.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 
 createApp(App)
-  .use(createPinia())
   .use(router)
+  .use(pinia)
   .component('svg-icon', SvgIcon)
   .mount('#app')
