@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import { getLocalStorage } from '@/utils/storage'
+import useSessionStore from "@/stores/session"
 
 NProgress.configure({ showSpinner: false })
 
@@ -63,9 +63,9 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   NProgress.start()
 
-  const session = JSON.parse(getLocalStorage('session') || '{}')
+  const sessionStore = useSessionStore()
 
-  if (to.meta.auth && !session.token) {
+  if (to.meta.auth && !sessionStore.token) {
     return next({
       name: 'Login',
       query: { redirect: encodeURIComponent(to.path) },

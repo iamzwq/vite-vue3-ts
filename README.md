@@ -4,6 +4,7 @@
 
 - vue3.2 + ts + vite
 - vue-router + pinia + axios
+- element-plus
 - vite-plugin-svg-icons
 - sass
 
